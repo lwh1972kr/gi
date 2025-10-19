@@ -1,0 +1,35 @@
+{
+  "name": "re-mes2",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "dev:web": "pnpm --filter web dev",
+    "dev:preview": "pnpm --filter web preview",
+    "build:web": "pnpm --filter web build",
+    "build:dx-ui-core": "pnpm --filter @re-mes2/dx-ui-core build",
+    "build:plan-module": "pnpm --filter @re-mes2/plan-module build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.18.3",
+  "devDependencies": {
+    "@types/node": "^24.8.1",
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.1",
+    "eslint": "~8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "devextreme": "~24.2.10",
+    "devextreme-vue": "~24.2.10"
+  }
+}
