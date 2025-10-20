@@ -19,7 +19,8 @@
     "pinia": "^3.0.3",
     "realgrid": "2.8.6",
     "realgrid-vue": "^0.9.6",
-    "vue": "^3.5.22"
+    "vue": "^3.5.22",
+    "@re-mes2/plan-module": "workspace:*"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",

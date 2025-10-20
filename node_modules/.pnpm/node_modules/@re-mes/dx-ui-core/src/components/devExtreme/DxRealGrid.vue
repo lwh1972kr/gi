@@ -19,6 +19,15 @@ import RealGrid from "realgrid";
 RealGrid.setLicenseKey("upVcPE+wPOmtLjqyBIh9RkM/nBOseBrflwxYpzGZyYm9cY8amGDkiHqyYT2U1Yh3Dufv8SUhNy4rAv6JxB26d2Se3PbBoyaMTrNJVrXXgD16/5L6Iw7glkVBdZjN8HfvkxValpjT3ck=");
 import { RealGridVue, RGDataColumn, RGDataField } from "realgrid-vue";
 import { ref } from "vue";
+import { useCounterStore } from  '@re-mes2/dx-ui-core'
+import { useCounterStore as cs } from  '@re-mes2/dx-ui-core'
+
+const counterStore = useCounterStore(); 
+counterStore.increment();
+const cc = cs(); 
+//counterStore.increment();
+console.log('dx-ui-core>>counterStore.count', counterStore.count, 'plan-module counterStore>', cc.count )
+
  
 const realgrid = ref<RealGridVue>(null);
 

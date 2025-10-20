@@ -8,7 +8,7 @@ import * as path from 'path';
 
 // https://vite.dev/config/
 export default defineConfig({
-  build: { lib: { entry: resolve(__dirname, 'src/index.ts'), formats: ['es'] } },
+  //build: { lib: { entry: resolve(__dirname, 'src/index.ts'), formats: ['es'] } },
   plugins: [
     vue(),
     vueDevTools(),
