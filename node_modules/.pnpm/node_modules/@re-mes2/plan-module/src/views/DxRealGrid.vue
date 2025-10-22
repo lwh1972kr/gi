@@ -12,7 +12,7 @@ import { customers, type Customer } from '@/data.ts'
 import { useAddStore } from '@re-mes2/dx-ui-core'
 import { usePlusStore } from '@re-mes2/plan-module'
 
-console.log('kkkdkd')
+console.log('kkkdkd=============')
 const addStore = useAddStore();
 addStore.increment();
 console.log('dd ddd  plan-module>>addStore.count', addStore.count)
