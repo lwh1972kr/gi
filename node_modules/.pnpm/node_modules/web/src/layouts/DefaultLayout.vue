@@ -5,6 +5,8 @@
  <router-link to="/about">about</router-link>
  <router-link to="/planModule">planModule</router-link>
  <router-link to="/planModuleRealGrid">planModuleRealGrid</router-link>
+ <router-link to="/workorderGrid">workorderGrid</router-link>
+ <router-link to="/workorderRealGrid">workorderRealGrid</router-link>
     </div>
   </header>
   <main>

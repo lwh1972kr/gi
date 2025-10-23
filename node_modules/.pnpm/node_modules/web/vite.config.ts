@@ -7,6 +7,7 @@ import * as path from 'path';
 
 // https://vite.dev/config/
 export default defineConfig({
+
   plugins: [
     vue(),
     vueDevTools(),
@@ -14,6 +15,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      "~packages": path.resolve(__dirname, "../../packages"),
       '@re-mes2/dx-ui-core': path.resolve(
         __dirname,
         '../../packages/dx-ui-core/src/index.ts'

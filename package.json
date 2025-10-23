@@ -7,11 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "dev:web": "pnpm --filter web dev",
-    "dev:preview": "pnpm --filter web preview",
-    "build:web": "pnpm --filter web build",
-    "build:dx-ui-core": "pnpm --filter @re-mes2/dx-ui-core build",
-    "build:plan-module": "pnpm --filter @re-mes2/plan-module build"
+    "dev:web": "pnpm --filter web run dev",
+    "dev:preview": "pnpm --filter web run preview",
+    "build:web": "pnpm --filter web run build",
+    "build:dx-ui-core": "pnpm --filter @re-mes2/dx-ui-core run build",
+    "build:plan-module": "pnpm --filter @re-mes2/plan-module run build"
   },
   "keywords": [],
   "author": "",
