@@ -15,7 +15,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      "~packages": path.resolve(__dirname, "../../packages"),
+     // "~packages": path.resolve(__dirname, "../../packages"),
       '@re-mes2/dx-ui-core': path.resolve(
         __dirname,
         '../../packages/dx-ui-core/src/index.ts'
@@ -26,4 +26,8 @@ export default defineConfig({
       )
     },
   },
+  build: {
+    outDir: 'dist',
+    sourcemap: true
+  }
 })

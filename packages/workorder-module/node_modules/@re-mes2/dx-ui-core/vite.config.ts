@@ -32,11 +32,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@re-mes2/plan-module': path.resolve(
-        __dirname,
-        '../plan-module/src/index.ts'
-      ),
+      '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
 })

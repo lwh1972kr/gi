@@ -23,8 +23,7 @@
     "realgrid-vue": "^0.9.6",
     "vue": "^3.5.22",
     "devextreme": "~24.2.10",
-    "devextreme-vue": "~24.2.10",
-    "@re-mes2/plan-module": "workspace:*"
+    "devextreme-vue": "~24.2.10"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",
