@@ -1,3 +1,18 @@
+export type MenuItem = {
+  name: string;
+  path: string;
+  moduleName: string;
+  modulePath: string;
+}
+
+export const menuList: MenuItem[] = [
+  { name: "planModule",      path: "/planModule", moduleName:"PlanModuleHomeView", modulePath:"plan-module"},
+  { name: "planModuleRealGrid", path: "/planModuleRealGrid", moduleName:"PlanModuleRealGridView", modulePath:"plan-module" },
+  { name: "diagram", path: "/diagram", moduleName:"Diagram", modulePath:"plan-module" },
+  //{ name: "workOrderGrid",   path: "/workorderGrid", moduleName:"PlanModuleHomeView", modulePath:"workorder-module" },
+  //{ name: "workOrderRealGrid", path: "/workorderRealGrid", moduleName:"PlanModuleRealGridView", modulePath:"workorder-module" },
+];
+
 export type CommonCode = {
   name: string
   code: string
@@ -7,7 +22,7 @@ export const commonCodeList: CommonCode[] = [
   { name: 'EN', code: 'EN' },
 ]
 
-export const menuList = [
+export const menuList1 = [
   //  { name: '메뉴', id: '0', parentId: '', depth: 0 },
   { name: '대메뉴1', id: '1', parentId: '', depth: 1 },
   { name: '중메뉴1', id: '2', parentId: '1', depth: 2 },

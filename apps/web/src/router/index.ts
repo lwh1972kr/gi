@@ -6,7 +6,17 @@ import DefaultLayout from '@/layouts/DefaultLayout.vue'
 
 import type { RouteRecordRaw } from 'vue-router';
 
+import {menuList, type MenuItem } from '@/data.ts'
+import {useAxios} from '@re-mes2/dx-ui-core'
+import { onMounted, reactive, ref, watchEffect } from 'vue'
 type PathMap = Record<string, { default: RouteRecordRaw[] }>;
+
+const test = async () => {
+  const response = await useAxios.getData('/menus1')
+console.log('response', response)
+}
+test();
+
 
 // 모든 모듈의 routes.ts 자동 import
 const modules = import.meta.glob<PathMap>(
@@ -17,12 +27,12 @@ console.log('modules', modules)
 // 타입 선언
 type ModuleObjects = Record<string, Record<string, any>>;
 
-interface MenuItem {
-  name: string;
-  path: string;
-  moduleName: string;
-  modulePath: string;
-}
+// interface MenuItem {
+//   name: string;
+//   path: string;
+//   moduleName: string;
+//   modulePath: string;
+// }
 interface RouterInfo {
   name: string;
   path: string;
@@ -42,12 +52,12 @@ interface ModuleRoute {
 //    { name: "workOrderGrid",   path: "workOrderGrid",   moduleName: "workorder-module" },
 //    { name: "workOrderRealGrid", path: "workOrderRealGrid", moduleName: "workorder-module" },
 // ];
-const menuList: MenuItem[] = [
-  { name: "planModule",      path: "/planModule", moduleName:"PlanModuleHomeView", modulePath:"plan-module"},
-  { name: "planModuleRealGrid", path: "/planModuleRealGrid", moduleName:"PlanModuleRealGridView", modulePath:"plan-module" },
-  // { name: "workOrderGrid",   path: "/workorderGrid", moduleName:"PlanModuleHomeView", modulePath:"workorder-module" },
-  // { name: "workOrderRealGrid", path: "/workorderRealGrid", moduleName:"PlanModuleRealGridView", modulePath:"workorder-module" },
-];
+// const menuList: MenuItem[] = [
+//   { name: "planModule",      path: "/planModule", moduleName:"PlanModuleHomeView", modulePath:"plan-module"},
+//   { name: "planModuleRealGrid", path: "/planModuleRealGrid", moduleName:"PlanModuleRealGridView", modulePath:"plan-module" },
+//   // { name: "workOrderGrid",   path: "/workorderGrid", moduleName:"PlanModuleHomeView", modulePath:"workorder-module" },
+//   // { name: "workOrderRealGrid", path: "/workorderRealGrid", moduleName:"PlanModuleRealGridView", modulePath:"workorder-module" },
+// ];
 
 // 2️⃣ 모든 layout 컴포넌트 자동 import
 const layoutModules = import.meta.glob("@/layouts/**/*.vue", { eager: true });

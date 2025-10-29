@@ -1,12 +1,9 @@
 <template>
   <header>
     <div id="nav" class="menu-wrap">
- <router-link to="/">Home</router-link>
- <router-link to="/about">about</router-link>
- <router-link to="/planModule">planModule</router-link>
- <router-link to="/planModuleRealGrid">planModuleRealGrid</router-link>
- <router-link to="/workorderGrid">workorderGrid</router-link>
- <router-link to="/workorderRealGrid">workorderRealGrid</router-link>
+    <router-link to="/">Home</router-link>
+ <router-link :to="menu.path" v-for="menu in menuList">{{menu.name}}</router-link>
+
     </div>
   </header>
   <main>
@@ -16,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-
+import {menuList, type MenuItem } from '@/data.ts'
 </script>
 <style>
 /* 헤더 - 높이, 색상 */

@@ -15,14 +15,8 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build"
   },
-  "dependencies": {
-    "pinia": "^3.0.3",
+  "peerDependencies": {
     "vue": "^3.5.22",
-    "vue-router": "^4.5.1",
-        "realgrid": "2.8.6",
-    "realgrid-vue": "^0.9.6",
-    "devextreme": "~24.2.10",
-    "devextreme-vue": "~24.2.10",
     "@re-mes2/dx-ui-core": "workspace:*"
   },
   "devDependencies": {
@@ -31,9 +25,15 @@
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.8.1",
     "npm-run-all2": "^8.0.4",
-    "typescript": "~5.9.0",
+    "eslint": "^9.38.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
     "vite": "^7.1.7",
     "vite-plugin-vue-devtools": "^8.0.2",
+    "vitest": "^3.2.4",
     "vue-tsc": "^3.1.0"
   }
 }
